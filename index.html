@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로봇소프트웨어과 포트폴리오 | Antigravity</title>
+    <meta name="description" content="명지전문대학 로봇소프트웨어과 프로젝트 포트폴리오 및 학과 공지사항. 작업자와 공존하는 스마트한 선택, 앤티그래비티 협동로봇.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="main-header">
+        <div class="container nav-content">
+            <!-- Logo removed -->
+            <nav class="main-nav" aria-label="메인 네비게이션">
+                <ul class="nav-links">
+                    <li><a href="#" data-route="home" data-ko="홈" data-en="Home">홈</a></li>
+
+                    <li><a href="#" data-route="products" data-ko="제품 라인업" data-en="Products">제품 라인업</a></li>
+                    <li><a href="#" data-route="applications" data-ko="사용처" data-en="Applications">사용처</a></li>
+                    <li><a href="#" data-route="news" data-ko="커뮤니티" data-en="Community">커뮤니티</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions" style="display: flex; align-items: center; gap: 1rem;">
+                <div class="lang-switch" style="color: #fff; font-size: 0.9rem; font-weight: bold; cursor: pointer; user-select: none;">
+                    <span id="btn-ko" onclick="window.setLanguage('ko')" style="color: var(--primary);">KO</span> | 
+                    <span id="btn-en" onclick="window.setLanguage('en')" style="opacity: 0.5;">EN</span>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <main id="app-content">
+        <!-- Content will be injected here by main.js -->
+    </main>
+
+    <footer id="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <!-- Footer logo removed -->
+                    <p data-ko="앤티그래비티는 혁신적인 로봇 기술을 통해 <br>인간과 기계의 완벽한 협업 환경을 창조합니다." data-en="Antigravity creates a perfect collaborative environment<br>between humans and machines through robotic innovation.">앤티그래비티는 혁신적인 로봇 기술을 통해 <br>인간과 기계의 완벽한 협업 환경을 창조합니다.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+
+                        <li><a href="#" data-route="news" data-ko="공지사항" data-en="Notices">공지사항</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li>Email: info@antigravity.robot</li>
+                        <li>Tel: +82 2-1234-5678</li>
+                        <li data-ko="Address: 서울특별시 금천구 가산로..." data-en="Address: Gasan-ro, Geumcheon-gu, Seoul...">Address: 서울특별시 금천구 가산로...</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Antigravity Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <!-- Firebase SDKs & Configuration -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore-compat.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyDnN9JMJApUMr89tiUpnV4s9TCkkYpH7CE",
+            authDomain: "xxxx-55c33.firebaseapp.com",
+            projectId: "xxxx-55c33",
+            storageBucket: "xxxx-55c33.firebasestorage.app",
+            messagingSenderId: "98395998200",
+            appId: "1:98395998200:web:eac68486e44a4de4e4380d",
+            measurementId: "G-JLKGBFTZP9"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        // Make firestore available globally
+        window.db = firebase.firestore();
+        console.log("Firebase initialized successfully.");
+    </script>
+
+    <script src="main.js"></script>
+</body>
+</html>
