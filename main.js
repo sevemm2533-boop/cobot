@@ -13,12 +13,98 @@ const templates = {
             <div class="container hero-center-content">
                 <p class="hero-top-text">Safety & Efficiency for Industry 4.0</p>
                 <h1 class="hero-main-title">사람과 기술의 동행,<br>지능형 협동로봇 솔루션</h1>
-                <p class="hero-sub-text">작업자의 안전을 최우선으로 하는 스마트한 협업. 독보적인 제어 기술과 인공지능으로 산업 현장의 혁신적인 미래를 이끌어갑니다.</p>
-
+                <p class="hero-sub-text">독보적인 로봇 기술을 통해 인간과 기계의 완벽한 협업 환경을 창조합니다.<br>작업자의 안전을 최우선으로 하는 지능형 솔루션으로 산업 현장의 혁신적인 미래를 이끌어갑니다.</p>
+                <div class="hero-cta-buttons" style="display: flex; gap: 1rem; justify-content: center; margin-top: 2rem;">
+                    <a href="#" class="btn-primary" onclick="window.navToProduct(null, event)">제품 라인업 보기</a>
+                    <a href="#" class="btn-secondary" onclick="navigate('contact')">도입 문의하기</a>
+                </div>
             </div>
         </section>
 
+        <!-- Product Lineup Section -->
         <section class="container reveal">
+            <div class="section-title">
+                <p style="color: var(--primary); font-weight: 700; margin-bottom: 0.5rem; letter-spacing: 2px;">ROBOT LINEUP</p>
+                <h2>지능형 협동로봇 라인업</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="grid" style="grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+                <div class="card" style="cursor: pointer;" onclick="window.navToProduct('a10', event)">
+                    <div class="card-img" style="height: 220px;">
+                        <img src="assets/robot_a10.png" alt="Cobot A-10">
+                    </div>
+                    <div class="card-body">
+                        <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem;">Cobot A-10</h3>
+                        <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem; min-height: 4.5rem;">가장 강력한 주력 모델로 12kg의 가반 하중과 1450mm의 넓은 작업 반경을 제공하며 고도화된 충돌 감지 기능이 내장되어 있습니다.</p>
+                        <span style="color: var(--primary); font-weight: bold; font-size: 0.95rem;">상세 사양 보기 &rarr;</span>
+                    </div>
+                </div>
+                <div class="card" style="cursor: pointer;" onclick="window.navToProduct('open_ring', event)">
+                    <div class="card-img" style="height: 220px;">
+                        <img src="assets/robot_open_ring.png" alt="OpenManipulator-X Ring Type">
+                    </div>
+                    <div class="card-body">
+                        <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem;">OpenManipulator-X (Ring)</h3>
+                        <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem; min-height: 4.5rem;">교육 및 연구용으로 최적화된 소형 로봇 팔입니다. 경량 링 타입 그리퍼를 이용해 다양한 객체를 걸어 이송할 수 있습니다.</p>
+                        <span style="color: var(--primary); font-weight: bold; font-size: 0.95rem;">상세 사양 보기 &rarr;</span>
+                    </div>
+                </div>
+                <div class="card" style="cursor: pointer;" onclick="window.navToProduct('open_sensor', event)">
+                    <div class="card-img" style="height: 220px;">
+                        <img src="assets/robot_open_sensor.png" alt="OpenManipulator-X Sensor Type">
+                    </div>
+                    <div class="card-body">
+                        <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem;">OpenManipulator-X (Sensor)</h3>
+                        <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem; min-height: 4.5rem;">비전 카메라와 초음파 센서가 결합된 지능형 교육 로봇으로 실시간 환경 인식 및 객체 인식을 구현합니다.</p>
+                        <span style="color: var(--primary); font-weight: bold; font-size: 0.95rem;">상세 사양 보기 &rarr;</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Applications Section -->
+        <section class="container reveal" style="padding-top: 2rem;">
+            <div class="section-title">
+                <p style="color: var(--primary); font-weight: 700; margin-bottom: 0.5rem; letter-spacing: 2px;">APPLICATIONS</p>
+                <h2>산업별 협업 솔루션</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="grid" style="grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+                <div class="card" style="cursor: pointer;" onclick="window.navToApplicationDetail('car', event)">
+                    <div class="card-img" style="height: 220px;">
+                        <img src="assets/car_factory_robot.png" alt="Car Manufacturing">
+                    </div>
+                    <div class="card-body">
+                        <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem;">자동차 제조</h3>
+                        <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem; min-height: 4.5rem;">자동차 조립 및 용접 공정에 투입되는 고정밀 협동로봇 솔루션으로 높은 신뢰성과 뛰어난 안전성을 제공합니다.</p>
+                        <span style="color: var(--primary); font-weight: bold; font-size: 0.95rem;">자세히 보기 &rarr;</span>
+                    </div>
+                </div>
+                <div class="card" style="cursor: pointer;" onclick="window.navToApplicationDetail('assembly', event)">
+                    <div class="card-img" style="height: 220px;">
+                        <img src="assets/assembly_working.jpg" alt="Assembly & Inspection">
+                    </div>
+                    <div class="card-body">
+                        <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem;">조립 및 검사</h3>
+                        <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem; min-height: 4.5rem;">비전 AI 센서와 실시간 힘 제어 피드백을 결합하여 오차 없는 초정밀 전자부품 조립 및 불량 분석을 수행합니다.</p>
+                        <span style="color: var(--primary); font-weight: bold; font-size: 0.95rem;">자세히 보기 &rarr;</span>
+                    </div>
+                </div>
+                <div class="card" style="cursor: pointer;" onclick="window.navToApplicationDetail('food', event)">
+                    <div class="card-img" style="height: 220px;">
+                        <img src="assets/food_working.jpg" alt="F&B Automation">
+                    </div>
+                    <div class="card-body">
+                        <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem;">F&B 자동화 연동</h3>
+                        <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem; min-height: 4.5rem;">무인 매장 자동화를 위해 POS 및 ROS 시스템을 연동한 바리스타 및 요리/조리 핸들링 솔루션을 제안합니다.</p>
+                        <span style="color: var(--primary); font-weight: bold; font-size: 0.95rem;">자세히 보기 &rarr;</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Expertise Section -->
+        <section class="container reveal" style="padding-top: 2rem;">
             <div class="section-title">
                 <p style="color: var(--primary); font-weight: 700; margin-bottom: 0.5rem; letter-spacing: 2px;">TECHNICAL EXPERTISE</p>
                 <h2>핵심 기술 역량</h2>
@@ -47,8 +133,6 @@ const templates = {
                 </div>
             </div>
         </section>
-
-
 
         <section class="stats container reveal">
             <div class="stat-item">
@@ -1255,11 +1339,98 @@ const templates_en = {
             <div class="container hero-center-content">
                 <p class="hero-top-text">Safety & Efficiency for Industry 4.0</p>
                 <h1 class="hero-main-title">Human-Centric,<br>Intelligent Cobot Solutions</h1>
-                <p class="hero-sub-text">Secure and seamless collaboration for the modern workforce. Delivering state-of-the-art industrial automation through advanced control systems and AI integration.</p>
-
+                <p class="hero-sub-text">Creating a perfect collaborative environment between humans and machines through robotic innovation.<br>Delivering state-of-the-art industrial automation through advanced control systems and AI integration.</p>
+                <div class="hero-cta-buttons" style="display: flex; gap: 1rem; justify-content: center; margin-top: 2rem;">
+                    <a href="#" class="btn-primary" onclick="window.navToProduct(null, event)">View Product Lineup</a>
+                    <a href="#" class="btn-secondary" onclick="navigate('contact')">Inquire Now</a>
+                </div>
             </div>
         </section>
+
+        <!-- Product Lineup Section -->
         <section class="container reveal">
+            <div class="section-title">
+                <p style="color: var(--primary); font-weight: 700; margin-bottom: 0.5rem; letter-spacing: 2px;">ROBOT LINEUP</p>
+                <h2>Intelligent Cobot Lineup</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="grid" style="grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+                <div class="card" style="cursor: pointer;" onclick="window.navToProduct('a10', event)">
+                    <div class="card-img" style="height: 220px;">
+                        <img src="assets/robot_a10.png" alt="Cobot A-10">
+                    </div>
+                    <div class="card-body">
+                        <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem;">Cobot A-10</h3>
+                        <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem; min-height: 4.5rem;">Our flagship model featuring 12kg payload and a wide 1450mm reach. Built-in collision detection and premium safety systems.</p>
+                        <span style="color: var(--primary); font-weight: bold; font-size: 0.95rem;">View Specs &rarr;</span>
+                    </div>
+                </div>
+                <div class="card" style="cursor: pointer;" onclick="window.navToProduct('open_ring', event)">
+                    <div class="card-img" style="height: 220px;">
+                        <img src="assets/robot_open_ring.png" alt="OpenManipulator-X Ring Type">
+                    </div>
+                    <div class="card-body">
+                        <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem;">OpenManipulator-X (Ring)</h3>
+                        <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem; min-height: 4.5rem;">Compact manipulator arm optimized for education and research. Employs lightweight ring gripper for hook-and-transfer.</p>
+                        <span style="color: var(--primary); font-weight: bold; font-size: 0.95rem;">View Specs &rarr;</span>
+                    </div>
+                </div>
+                <div class="card" style="cursor: pointer;" onclick="window.navToProduct('open_sensor', event)">
+                    <div class="card-img" style="height: 220px;">
+                        <img src="assets/robot_open_sensor.png" alt="OpenManipulator-X Sensor Type">
+                    </div>
+                    <div class="card-body">
+                        <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem;">OpenManipulator-X (Sensor)</h3>
+                        <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem; min-height: 4.5rem;">Intelligent manipulator combining vision camera and ultrasonic sensor. Enables real-time environment sensing and object recognition.</p>
+                        <span style="color: var(--primary); font-weight: bold; font-size: 0.95rem;">View Specs &rarr;</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Applications Section -->
+        <section class="container reveal" style="padding-top: 2rem;">
+            <div class="section-title">
+                <p style="color: var(--primary); font-weight: 700; margin-bottom: 0.5rem; letter-spacing: 2px;">APPLICATIONS</p>
+                <h2>Industrial Collaborative Solutions</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="grid" style="grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+                <div class="card" style="cursor: pointer;" onclick="window.navToApplicationDetail('car', event)">
+                    <div class="card-img" style="height: 220px;">
+                        <img src="assets/car_factory_robot.png" alt="Car Manufacturing">
+                    </div>
+                    <div class="card-body">
+                        <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem;">Car Manufacturing</h3>
+                        <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem; min-height: 4.5rem;">High-precision welding and assembly. Operates fence-free side-by-side with workers to boost overall throughput.</p>
+                        <span style="color: var(--primary); font-weight: bold; font-size: 0.95rem;">View Solution &rarr;</span>
+                    </div>
+                </div>
+                <div class="card" style="cursor: pointer;" onclick="window.navToApplicationDetail('assembly', event)">
+                    <div class="card-img" style="height: 220px;">
+                        <img src="assets/assembly_working.jpg" alt="Assembly & Inspection">
+                    </div>
+                    <div class="card-body">
+                        <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem;">Assembly & Inspection</h3>
+                        <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem; min-height: 4.5rem;">Sub-millimeter assembly coupled with Vision AI. Automatically inspects cosmetic flaws and assembly completeness.</p>
+                        <span style="color: var(--primary); font-weight: bold; font-size: 0.95rem;">View Solution &rarr;</span>
+                    </div>
+                </div>
+                <div class="card" style="cursor: pointer;" onclick="window.navToApplicationDetail('food', event)">
+                    <div class="card-img" style="height: 220px;">
+                        <img src="assets/food_working.jpg" alt="F&B Automation">
+                    </div>
+                    <div class="card-body">
+                        <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem;">F&B Automation</h3>
+                        <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem; min-height: 4.5rem;">Barista & fryer automation solutions. POS integration and ROS-based controls build clean, automated retail booths.</p>
+                        <span style="color: var(--primary); font-weight: bold; font-size: 0.95rem;">View Solution &rarr;</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Expertise Section -->
+        <section class="container reveal" style="padding-top: 2rem;">
             <div class="section-title">
                 <p style="color: var(--primary); font-weight: 700; margin-bottom: 0.5rem; letter-spacing: 2px;">TECHNICAL EXPERTISE</p>
                 <h2>Core Technical Competencies</h2>
@@ -1288,8 +1459,6 @@ const templates_en = {
                 </div>
             </div>
         </section>
-
-
 
         <section class="stats container reveal">
             <div class="stat-item">
