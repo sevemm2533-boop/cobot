@@ -15,6 +15,16 @@
     --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
 }
 
+[data-theme="light"] {
+    --text-main: #1d1d1f;
+    --text-muted: #6e6e73;
+    --bg-light: #ffffff;
+    --bg-gray: #f5f5f7;
+    --glass: rgba(0, 0, 0, 0.03);
+    --glass-border: rgba(0, 0, 0, 0.08);
+    --accent: #f5f5f7;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -64,14 +74,14 @@ header {
     top: 0;
     width: 100%;
     z-index: 1000;
-    background: #000; /* Solid black as requested */
-    border-bottom: 1px solid #222;
+    background: var(--bg-light);
+    border-bottom: 1px solid var(--glass-border);
     transition: var(--transition);
     padding: 1rem 0;
 }
 
 header.scrolled {
-    background: #000;
+    background: var(--bg-light);
     padding: 0.8rem 0;
     border-bottom: 1px solid var(--primary);
 }
@@ -140,7 +150,7 @@ header.scrolled {
     top: 100%;
     left: 0;
     width: 100%;
-    background: #080808;
+    background: var(--bg-gray);
     border-bottom: 2px solid var(--primary);
     padding: 3rem 0;
     opacity: 0;
@@ -221,7 +231,7 @@ header.scrolled {
 
 nav a {
     text-decoration: none;
-    color: #fff;
+    color: var(--text-main);
     font-weight: 600;
     font-size: 0.95rem;
     transition: var(--transition);
@@ -314,11 +324,12 @@ nav a:hover::after, nav a.active::after {
     line-height: 1.1;
     margin-bottom: 2rem;
     text-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    color: #ffffff !important;
 }
 
 .hero-sub-text {
     font-size: 1.4rem;
-    color: #eee;
+    color: rgba(255, 255, 255, 0.85) !important;
     margin: 0 auto 3rem;
     max-width: 700px;
     text-shadow: 0 2px 10px rgba(0,0,0,0.5);
@@ -331,16 +342,17 @@ nav a:hover::after, nav a.active::after {
     letter-spacing: 1px;
 }
 
-.hero-main-title {
+.hero-main-title-2 {
     font-size: 4.5rem;
     font-weight: 900;
     line-height: 1.1;
     margin-bottom: 1.5rem;
+    color: #ffffff !important;
 }
 
-.hero-sub-text {
+.hero-sub-text-2 {
     font-size: 1.2rem;
-    color: var(--text-muted);
+    color: rgba(255, 255, 255, 0.7) !important;
     margin-bottom: 2.5rem;
     max-width: 500px;
 }
@@ -441,7 +453,7 @@ section {
 
 .section-title h2 {
     font-size: 2.5rem;
-    color: #fff;
+    color: var(--text-main);
     margin-bottom: 1rem;
 }
 
@@ -529,7 +541,7 @@ section {
 
 .card-body h3 {
     margin-bottom: 1rem;
-    color: #fff;
+    color: var(--text-main);
 }
 
 .card-body p {
@@ -539,13 +551,13 @@ section {
 /* --- Counter Section --- */
 
 .stats {
-    background: #080808;
+    background: var(--bg-gray);
     display: flex;
     justify-content: space-around;
     padding: 5rem 0;
     text-align: center;
-    border-top: 1px solid #222;
-    border-bottom: 1px solid #222;
+    border-top: 1px solid var(--glass-border);
+    border-bottom: 1px solid var(--glass-border);
 }
 
 .stat-item h4 {
@@ -562,10 +574,10 @@ section {
 /* --- Footer --- */
 
 footer {
-    background: #000;
-    color: #999;
+    background: var(--bg-light);
+    color: var(--text-muted);
     padding: 5rem 0 2rem;
-    border-top: 1px solid #222;
+    border-top: 1px solid var(--glass-border);
 }
 
 .footer-content {
@@ -704,8 +716,8 @@ footer {
 /* --- CMS / Board --- */
 
 .board-container {
-    background: #111;
-    border: 1px solid #222;
+    background: var(--bg-gray);
+    border: 1px solid var(--glass-border);
     border-radius: 12px;
     padding: 2rem;
 }
@@ -718,24 +730,24 @@ footer {
 .board-table th, .board-table td {
     padding: 1rem;
     text-align: left;
-    border-bottom: 1px solid #222;
-    color: #fff;
+    border-bottom: 1px solid var(--glass-border);
+    color: var(--text-main);
 }
 
 .board-table th {
-    background: #1a1a1a;
+    background: var(--glass);
     color: var(--primary);
     font-weight: 700;
 }
 
 .board-table tr:hover td {
-    background: #1a1a1a;
+    background: var(--glass);
 }
 
 input, select, textarea {
-    background: #1a1a1a;
-    border: 1px solid #333;
-    color: #fff;
+    background: var(--bg-light);
+    border: 1px solid var(--glass-border);
+    color: var(--text-main);
     outline: none;
 }
 
@@ -770,6 +782,12 @@ input:focus, select:focus, textarea:focus {
     .nav-content { flex-direction: column; gap: 1rem; }
     .nav-left { flex-direction: column; gap: 0.8rem; width: 100%; text-align: center; }
     .nav-links { flex-wrap: wrap; justify-content: center; gap: 1rem; }
+    nav a {
+        padding: 0.8rem 1.2rem;
+        display: inline-block;
+        min-height: 44px;
+        min-width: 44px;
+    }
     
     section { padding: 4rem 0; }
     section[style*="padding-top"] { padding-top: 6rem !important; }
@@ -793,6 +811,20 @@ input:focus, select:focus, textarea:focus {
     .board-table th, .board-table td { font-size: 0.85rem; padding: 0.6rem 0.2rem; word-break: break-word; }
     
     div[style*="justify-content: space-around"] { flex-wrap: wrap; gap: 1.5rem; }
+    
+    .btn-primary, .btn-secondary {
+        min-height: 48px;
+        padding: 0.8rem 2rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .product-tab-btn, .board-tab {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 /* --- Mega Menu Active State & Sub-menu Hover Highlights --- */
@@ -860,7 +892,7 @@ input:focus, select:focus, textarea:focus {
 
 .app-detail-header h2 {
     font-size: 2.8rem;
-    color: #fff;
+    color: var(--text-main);
     margin-bottom: 0.5rem;
     font-weight: 800;
 }
@@ -883,7 +915,7 @@ input:focus, select:focus, textarea:focus {
     border-radius: 16px;
     overflow: hidden;
     border: 1px solid var(--glass-border);
-    background: #050505;
+    background: var(--bg-gray);
     margin-bottom: 1.5rem;
     box-shadow: 0 15px 35px rgba(0,0,0,0.6);
 }
@@ -907,7 +939,7 @@ input:focus, select:focus, textarea:focus {
     overflow: hidden;
     border: 2px solid transparent;
     cursor: pointer;
-    background: #000;
+    background: var(--bg-gray);
     opacity: 0.6;
     transition: var(--transition);
 }
@@ -930,7 +962,7 @@ input:focus, select:focus, textarea:focus {
 
 .app-section h3 {
     font-size: 1.5rem;
-    color: #fff;
+    color: var(--text-main);
     margin-bottom: 1.2rem;
     position: relative;
     padding-left: 1rem;
@@ -989,7 +1021,7 @@ input:focus, select:focus, textarea:focus {
 }
 
 .app-benefit-text h5 {
-    color: #fff;
+    color: var(--text-main);
     font-size: 1.05rem;
     margin-bottom: 0.3rem;
     font-weight: 600;
@@ -1023,7 +1055,7 @@ input:focus, select:focus, textarea:focus {
 }
 
 .app-usecase-item h4 {
-    color: #fff;
+    color: var(--text-main);
     font-size: 1.15rem;
     margin-bottom: 1rem;
 }
@@ -1036,7 +1068,7 @@ input:focus, select:focus, textarea:focus {
 
 .app-specs-table th {
     width: 250px;
-    background: #111;
+    background: var(--bg-gray);
 }
 
 .app-cta-container {
@@ -1044,7 +1076,7 @@ input:focus, select:focus, textarea:focus {
 }
 
 .app-cta-card {
-    background: linear-gradient(135deg, #050505 0%, #111 100%);
+    background: var(--bg-gray);
     border: 1px solid var(--primary);
     border-radius: 16px;
     padding: 3rem;
@@ -1054,7 +1086,7 @@ input:focus, select:focus, textarea:focus {
 
 .app-cta-card h4 {
     font-size: 1.8rem;
-    color: #fff;
+    color: var(--text-main);
     margin-bottom: 1rem;
 }
 
@@ -1075,4 +1107,18 @@ input:focus, select:focus, textarea:focus {
     .app-usecases-grid {
         grid-template-columns: 1fr;
     }
+}
+
+/* Global Focus Styles for Accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible,
+.card[onclick]:focus-visible {
+    outline: 2px solid var(--primary) !important;
+    outline-offset: 4px !important;
+    box-shadow: 0 0 10px var(--primary-glow) !important;
+    border-radius: 4px;
 }

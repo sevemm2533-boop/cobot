@@ -29,7 +29,7 @@ const templates = {
                 <div class="divider"></div>
             </div>
             <div class="grid" style="grid-template-columns: repeat(3, 1fr); gap: 2rem;">
-                <div class="card" style="cursor: pointer;" onclick="window.navToProduct('a10', event)">
+                <div class="card reveal" tabindex="0" style="cursor: pointer;" onclick="window.navToProduct('a10', event)">
                     <div class="card-img" style="height: 220px;">
                         <img src="assets/robot_a10.png" alt="Cobot A-10">
                     </div>
@@ -39,7 +39,7 @@ const templates = {
                         <span style="color: var(--primary); font-weight: bold; font-size: 0.95rem;">상세 사양 보기 &rarr;</span>
                     </div>
                 </div>
-                <div class="card" style="cursor: pointer;" onclick="window.navToProduct('open_ring', event)">
+                <div class="card reveal" tabindex="0" style="cursor: pointer;" onclick="window.navToProduct('open_ring', event)">
                     <div class="card-img" style="height: 220px;">
                         <img src="assets/robot_open_ring.png" alt="OpenManipulator-X Ring Type">
                     </div>
@@ -49,7 +49,7 @@ const templates = {
                         <span style="color: var(--primary); font-weight: bold; font-size: 0.95rem;">상세 사양 보기 &rarr;</span>
                     </div>
                 </div>
-                <div class="card" style="cursor: pointer;" onclick="window.navToProduct('open_sensor', event)">
+                <div class="card reveal" tabindex="0" style="cursor: pointer;" onclick="window.navToProduct('open_sensor', event)">
                     <div class="card-img" style="height: 220px;">
                         <img src="assets/robot_open_sensor.png" alt="OpenManipulator-X Sensor Type">
                     </div>
@@ -70,7 +70,7 @@ const templates = {
                 <div class="divider"></div>
             </div>
             <div class="grid" style="grid-template-columns: repeat(3, 1fr); gap: 2rem;">
-                <div class="card" style="cursor: pointer;" onclick="window.navToApplicationDetail('car', event)">
+                <div class="card reveal" tabindex="0" style="cursor: pointer;" onclick="window.navToApplicationDetail('car', event)">
                     <div class="card-img" style="height: 220px;">
                         <img src="assets/car_factory_robot.png" alt="Car Manufacturing">
                     </div>
@@ -80,7 +80,7 @@ const templates = {
                         <span style="color: var(--primary); font-weight: bold; font-size: 0.95rem;">자세히 보기 &rarr;</span>
                     </div>
                 </div>
-                <div class="card" style="cursor: pointer;" onclick="window.navToApplicationDetail('assembly', event)">
+                <div class="card reveal" tabindex="0" style="cursor: pointer;" onclick="window.navToApplicationDetail('assembly', event)">
                     <div class="card-img" style="height: 220px;">
                         <img src="assets/assembly_working.jpg" alt="Assembly & Inspection">
                     </div>
@@ -90,7 +90,7 @@ const templates = {
                         <span style="color: var(--primary); font-weight: bold; font-size: 0.95rem;">자세히 보기 &rarr;</span>
                     </div>
                 </div>
-                <div class="card" style="cursor: pointer;" onclick="window.navToApplicationDetail('food', event)">
+                <div class="card reveal" tabindex="0" style="cursor: pointer;" onclick="window.navToApplicationDetail('food', event)">
                     <div class="card-img" style="height: 220px;">
                         <img src="assets/food_working.jpg" alt="F&B Automation">
                     </div>
@@ -111,22 +111,22 @@ const templates = {
                 <div class="divider"></div>
             </div>
             <div class="grid" style="grid-template-columns: repeat(4, 1fr); gap: 1.5rem;">
-                <div class="card" style="padding: 2rem; text-align: center;">
+                <div class="card reveal" tabindex="0" style="padding: 2rem; text-align: center;">
                     <div style="font-size: 2.5rem; margin-bottom: 1rem;">🌐</div>
                     <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Web Control</h3>
                     <p style="font-size: 0.85rem; color: var(--text-muted);">Firebase 연동 실시간 관제 시스템 구축</p>
                 </div>
-                <div class="card" style="padding: 2rem; text-align: center;">
+                <div class="card reveal" tabindex="0" style="padding: 2rem; text-align: center;">
                     <div style="font-size: 2.5rem; margin-bottom: 1rem;">🤖</div>
                     <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Robot Control</h3>
                     <p style="font-size: 0.85rem; color: var(--text-muted);">ROS 기반 협동로봇 제어 오퍼레이팅</p>
                 </div>
-                <div class="card" style="padding: 2rem; text-align: center;">
+                <div class="card reveal" tabindex="0" style="padding: 2rem; text-align: center;">
                     <div style="font-size: 2.5rem; margin-bottom: 1rem;">👁️</div>
                     <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Computer Vision</h3>
                     <p style="font-size: 0.85rem; color: var(--text-muted);">비전 센서를 이용한 품질 자동 검사</p>
                 </div>
-                <div class="card" style="padding: 2rem; text-align: center;">
+                <div class="card reveal" tabindex="0" style="padding: 2rem; text-align: center;">
                     <div style="font-size: 2.5rem; margin-bottom: 1rem;">📊</div>
                     <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Data Analytics</h3>
                     <p style="font-size: 0.85rem; color: var(--text-muted);">작동 로그 분석 및 가동률 대시보드</p>
@@ -215,21 +215,21 @@ const templates = {
                 <div class="divider"></div>
             </div>
             <div class="grid">
-                <div class="card" id="app-car" onclick="window.navToApplicationDetail('car')" style="cursor: pointer;">
+                <div class="card reveal" tabindex="0" id="app-car" onclick="window.navToApplicationDetail('car')" style="cursor: pointer;">
                     <div class="card-img"><img src="assets/car_factory_robot.png" alt="Car Factory Robot"></div>
                     <div class="card-body">
                         <h3>자동차 제조 (Car Manufacturing)</h3>
                         <p>자동차 공장에서 조립 및 용접 공정에 투입되는 협동로봇입니다. 높은 정밀도와 내구성을 자랑합니다.</p>
                     </div>
                 </div>
-                <div class="card" id="app-assembly" onclick="window.navToApplicationDetail('assembly')" style="cursor: pointer;">
+                <div class="card reveal" tabindex="0" id="app-assembly" onclick="window.navToApplicationDetail('assembly')" style="cursor: pointer;">
                     <div class="card-img"><img src="assets/assembly_working.jpg" alt="Assembly"></div>
                     <div class="card-body">
                         <h3>조립 및 검사 (Assembly)</h3>
                         <p>비전 센서와 결합하여 정밀한 부품 조립 and 불량품 검사를 동시 수행합니다.</p>
                     </div>
                 </div>
-                <div class="card" id="app-food" onclick="window.navToApplicationDetail('food')" style="cursor: pointer;" tabindex="0">
+                <div class="card reveal" id="app-food" onclick="window.navToApplicationDetail('food')" style="cursor: pointer;" tabindex="0">
                     <div class="card-img"><img src="assets/food_working.jpg" loading="lazy" alt="F&B 로봇 작동 모습"></div>
                     <div class="card-body">
                         <h3>F&B (푸드테크) 자동화 연동</h3>
@@ -1002,7 +1002,7 @@ function finalizeNavigation(route) {
         } else {
             link.classList.remove('active');
             link.removeAttribute('aria-current');
-            link.style.color = '#fff';
+            link.style.color = 'var(--text-main)';
         }
     });
 
@@ -1206,6 +1206,20 @@ function init() {
 
     navigate('home');
     initVideoCycler();
+    initTheme();
+    
+    // Accessibility: Keydown triggers click on cards
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            const activeEl = document.activeElement;
+            if (activeEl && (activeEl.classList.contains('card') || activeEl.hasAttribute('onclick') || activeEl.hasAttribute('data-route'))) {
+                if (activeEl.tagName !== 'BUTTON' && activeEl.tagName !== 'A') {
+                    e.preventDefault();
+                    activeEl.click();
+                }
+            }
+        }
+    });
     
     // Hero Mouse Effect
     document.addEventListener('mousemove', (e) => {
@@ -1214,6 +1228,36 @@ function init() {
         document.documentElement.style.setProperty('--mouse-x', x + '%');
         document.documentElement.style.setProperty('--mouse-y', y + '%');
     });
+}
+
+// Theme Switcher Logic
+function initTheme() {
+    const themeToggle = document.getElementById('theme-toggle');
+    const moonIcon = document.getElementById('theme-icon-moon');
+    const sunIcon = document.getElementById('theme-icon-sun');
+    if (!themeToggle || !moonIcon || !sunIcon) return;
+
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    updateThemeUI(savedTheme);
+
+    themeToggle.addEventListener('click', () => {
+        const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        updateThemeUI(newTheme);
+    });
+
+    function updateThemeUI(theme) {
+        if (theme === 'light') {
+            moonIcon.style.display = 'none';
+            sunIcon.style.display = 'block';
+        } else {
+            moonIcon.style.display = 'block';
+            sunIcon.style.display = 'none';
+        }
+    }
 }
 
 function initVideoCycler() {
@@ -1269,8 +1313,8 @@ window.setLanguage = function(lang) {
     // Update language selection buttons opacity/color
     document.getElementById('btn-ko').style.opacity = lang === 'ko' ? '1' : '0.5';
     document.getElementById('btn-en').style.opacity = lang === 'en' ? '1' : '0.5';
-    document.getElementById('btn-ko').style.color = lang === 'ko' ? 'var(--primary)' : '#fff';
-    document.getElementById('btn-en').style.color = lang === 'en' ? 'var(--primary)' : '#fff';
+    document.getElementById('btn-ko').style.color = lang === 'ko' ? 'var(--primary)' : 'var(--text-main)';
+    document.getElementById('btn-en').style.color = lang === 'en' ? 'var(--primary)' : 'var(--text-main)';
 
     // Update static HTML tags defined with data-ko/data-en
     document.querySelectorAll('[data-ko][data-en]').forEach(el => {
@@ -1355,7 +1399,7 @@ const templates_en = {
                 <div class="divider"></div>
             </div>
             <div class="grid" style="grid-template-columns: repeat(3, 1fr); gap: 2rem;">
-                <div class="card" style="cursor: pointer;" onclick="window.navToProduct('a10', event)">
+                <div class="card reveal" tabindex="0" style="cursor: pointer;" onclick="window.navToProduct('a10', event)">
                     <div class="card-img" style="height: 220px;">
                         <img src="assets/robot_a10.png" alt="Cobot A-10">
                     </div>
@@ -1365,7 +1409,7 @@ const templates_en = {
                         <span style="color: var(--primary); font-weight: bold; font-size: 0.95rem;">View Specs &rarr;</span>
                     </div>
                 </div>
-                <div class="card" style="cursor: pointer;" onclick="window.navToProduct('open_ring', event)">
+                <div class="card reveal" tabindex="0" style="cursor: pointer;" onclick="window.navToProduct('open_ring', event)">
                     <div class="card-img" style="height: 220px;">
                         <img src="assets/robot_open_ring.png" alt="OpenManipulator-X Ring Type">
                     </div>
@@ -1375,7 +1419,7 @@ const templates_en = {
                         <span style="color: var(--primary); font-weight: bold; font-size: 0.95rem;">View Specs &rarr;</span>
                     </div>
                 </div>
-                <div class="card" style="cursor: pointer;" onclick="window.navToProduct('open_sensor', event)">
+                <div class="card reveal" tabindex="0" style="cursor: pointer;" onclick="window.navToProduct('open_sensor', event)">
                     <div class="card-img" style="height: 220px;">
                         <img src="assets/robot_open_sensor.png" alt="OpenManipulator-X Sensor Type">
                     </div>
@@ -1396,7 +1440,7 @@ const templates_en = {
                 <div class="divider"></div>
             </div>
             <div class="grid" style="grid-template-columns: repeat(3, 1fr); gap: 2rem;">
-                <div class="card" style="cursor: pointer;" onclick="window.navToApplicationDetail('car', event)">
+                <div class="card reveal" tabindex="0" style="cursor: pointer;" onclick="window.navToApplicationDetail('car', event)">
                     <div class="card-img" style="height: 220px;">
                         <img src="assets/car_factory_robot.png" alt="Car Manufacturing">
                     </div>
@@ -1406,7 +1450,7 @@ const templates_en = {
                         <span style="color: var(--primary); font-weight: bold; font-size: 0.95rem;">View Solution &rarr;</span>
                     </div>
                 </div>
-                <div class="card" style="cursor: pointer;" onclick="window.navToApplicationDetail('assembly', event)">
+                <div class="card reveal" tabindex="0" style="cursor: pointer;" onclick="window.navToApplicationDetail('assembly', event)">
                     <div class="card-img" style="height: 220px;">
                         <img src="assets/assembly_working.jpg" alt="Assembly & Inspection">
                     </div>
@@ -1416,7 +1460,7 @@ const templates_en = {
                         <span style="color: var(--primary); font-weight: bold; font-size: 0.95rem;">View Solution &rarr;</span>
                     </div>
                 </div>
-                <div class="card" style="cursor: pointer;" onclick="window.navToApplicationDetail('food', event)">
+                <div class="card reveal" tabindex="0" style="cursor: pointer;" onclick="window.navToApplicationDetail('food', event)">
                     <div class="card-img" style="height: 220px;">
                         <img src="assets/food_working.jpg" alt="F&B Automation">
                     </div>
@@ -1437,22 +1481,22 @@ const templates_en = {
                 <div class="divider"></div>
             </div>
             <div class="grid" style="grid-template-columns: repeat(4, 1fr); gap: 1.5rem;">
-                <div class="card" style="padding: 2rem; text-align: center;">
+                <div class="card reveal" tabindex="0" style="padding: 2rem; text-align: center;">
                     <div style="font-size: 2.5rem; margin-bottom: 1rem;">🌐</div>
                     <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Web Control</h3>
                     <p style="font-size: 0.85rem; color: var(--text-muted);">Real-time monitoring via Firebase integration</p>
                 </div>
-                <div class="card" style="padding: 2rem; text-align: center;">
+                <div class="card reveal" tabindex="0" style="padding: 2rem; text-align: center;">
                     <div style="font-size: 2.5rem; margin-bottom: 1rem;">🤖</div>
                     <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Robot Control</h3>
                     <p style="font-size: 0.85rem; color: var(--text-muted);">ROS-based collaborative robot operation</p>
                 </div>
-                <div class="card" style="padding: 2rem; text-align: center;">
+                <div class="card reveal" tabindex="0" style="padding: 2rem; text-align: center;">
                     <div style="font-size: 2.5rem; margin-bottom: 1rem;">👁️</div>
                     <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Computer Vision</h3>
                     <p style="font-size: 0.85rem; color: var(--text-muted);">Automated quality inspection with vision sensors</p>
                 </div>
-                <div class="card" style="padding: 2rem; text-align: center;">
+                <div class="card reveal" tabindex="0" style="padding: 2rem; text-align: center;">
                     <div style="font-size: 2.5rem; margin-bottom: 1rem;">📊</div>
                     <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Data Analytics</h3>
                     <p style="font-size: 0.85rem; color: var(--text-muted);">Operational log analysis & uptime dashboards</p>
@@ -1533,21 +1577,21 @@ const templates_en = {
                 <div class="divider"></div>
             </div>
             <div class="grid">
-                <div class="card" id="app-car" onclick="window.navToApplicationDetail('car')" style="cursor: pointer;">
+                <div class="card reveal" tabindex="0" id="app-car" onclick="window.navToApplicationDetail('car')" style="cursor: pointer;">
                     <div class="card-img"><img src="assets/car_factory_robot.png" alt="Car Factory Robot"></div>
                     <div class="card-body">
                         <h3>Car Manufacturing</h3>
                         <p>Collaborative robots used in assembly and welding processes in car factories. Boasts high precision and durability.</p>
                     </div>
                 </div>
-                <div class="card" id="app-assembly" onclick="window.navToApplicationDetail('assembly')" style="cursor: pointer;">
+                <div class="card reveal" tabindex="0" id="app-assembly" onclick="window.navToApplicationDetail('assembly')" style="cursor: pointer;">
                     <div class="card-img"><img src="assets/assembly_working.jpg" alt="Assembly"></div>
                     <div class="card-body">
                         <h3>Assembly & Inspection</h3>
                         <p>Simultaneously performs precise part assembly and defect inspection combined with vision sensors.</p>
                     </div>
                 </div>
-                <div class="card" id="app-food" onclick="window.navToApplicationDetail('food')" style="cursor: pointer;" tabindex="0">
+                <div class="card reveal" id="app-food" onclick="window.navToApplicationDetail('food')" style="cursor: pointer;" tabindex="0">
                     <div class="card-img"><img src="assets/food_working.jpg" loading="lazy" alt="F&B Robot in Action"></div>
                     <div class="card-body">
                         <h3>F&B Automation</h3>
